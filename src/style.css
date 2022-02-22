@@ -11,7 +11,7 @@ main {
 
 .container {
   width: 100%;
-  margin: 3.125rem auto 0 auto;
+  margin: 3.125rem auto 0;
 }
 
 @media (min-width: 576px) {
@@ -45,6 +45,7 @@ form {
   padding: 0.2em;
   font-size: 1rem;
 }
+
 label {
   padding: 0.5em;
   order: 1;
@@ -71,10 +72,10 @@ textarea:hover {
   border-color: blue;
 }
 
-form > div > input[required] + label:after,
-form > div > select[required] + label:after,
-form > div > textarea[required] + label:after,
-form > div > fieldset > input[required] ~ legend:after {
+form > div > input[required] + label::after,
+form > div > select[required] + label::after,
+form > div > textarea[required] + label::after,
+form > div > fieldset > input[required] ~ legend::after {
   content: "*";
   color: red;
 }
