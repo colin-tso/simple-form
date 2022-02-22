@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h1 id="title">Simple Form</h1>
+      <p id="description" class="description text-center">This is a simple form</p>
+
+      <form id="survey-form">
+        <div class="form-group">
+          <input id="name" type="text" name="name" class="form-control" placeholder="Enter your name" required />
+          <label id="name-label" for="name">Name: </label>
+        </div>
+        <div class="form-group">
+          <input id="email" type="email" name="email" class="form-control" placeholder="Enter your email" required />
+          <label id="email-label" for="email">Email: </label>
+        </div>
+        <div class="form-group">
+          <input id="number" type="number" name="age" min="0" max="99" class="form-control" placeholder="Age" />
+          <label id="number-label" for="number">Age: <span class="optional">(optional)</span></label>
+        </div>
+        <div class="form-group">
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value="">Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="dropdown">Which option best describes your current role?</label>
+        </div>
+        <div class="form-group">
+          <fieldset id="user-recommends">
+            <input id="user-definitely" name="user-recommends" type="radio" value="definitely" class="input-radio"
+              required>
+            <label for="user-definitely">Definitely</label>
+            <input id="user-maybe" name="user-recommends" type="radio" value="maybe" class="input-radio" required>
+            <label for="user-maybe">Maybe</label>
+            <input id="user-no" name="user-recommends" type="radio" value="no" class="input-radio" required>
+            <label for="user-no">No</label>
+            <legend for="user-recommends">Would you recommend our webpage to your friends?</legend>
+          </fieldset>
+          <fieldset id="user-improvements">
+            <input id="user-front" name="user-improvements" type="checkbox" value="Front-End Projects"
+              class="input-checkbox">
+            <label for="user-front-end">Front-End Projects</label>
+            <input id="user-back" name="user-improvements" type="checkbox" value="maybe" class="input-checkbox">
+            <label for="user-maybe">Back-End Projects</label>
+            <input id="user-no" name="user-improvements" type="checkbox" value="no" class="input-checkbox">
+            <label for="user-no">Customer Service</label>
+            <legend for="user-recommends">What would you like to see improved? <span class="clue">(check all that
+                apply)</span></legend>
+          </fieldset>
+          <div class="form-group">
+            <textarea id="comments" class="input-textarea" name="comment"
+              placeholder="Enter your comments here"></textarea>
+            <label for="comments">Comments:</label>
+          </div>
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+          </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+
+</html>
